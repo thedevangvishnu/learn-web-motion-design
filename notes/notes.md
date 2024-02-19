@@ -42,3 +42,8 @@
   - transiiton-delay: time after which the transition effect should get applied
 
   - shorthand property: "transition"
+
+- To create overlay transitions
+  - we use background: linear-gradient(), but transition-property doesn't apply on background or background-image properties.
+  - for that, we can add a ::before element and give background: linear-gradient() to it. Then, we can add transition to this ::before element on main-element::hover
+  - slick designs can be achieved using just transition, transform and opacity property
