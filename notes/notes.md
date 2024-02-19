@@ -1,6 +1,6 @@
 # MOTION DESIGN FOR WEB
 
-## Chapter 1: The basics
+## The basics
 
 - What is motion design?
 
@@ -29,3 +29,16 @@
     - Adding motion to elements can allow user to draw attention, thus informing them about the element.
   - Aesthetic
     - Adding motion to elements also adds to the stylistic aspect and add up to the personality and whole vibe of a website/element.
+
+## CSS Transiitons
+
+- These are a functionality provided by CSS that allow smooth and gradual change in element's properties over a specified duration.
+- There's no point of reference or stop between those two points when applying transitions. It's simple: Point A --> transitions to --> Point B
+- The four main properties for transition in CSS:
+
+  - transition-property: other css property name on which transition effect must be applied
+  - transition-duration: duration for which the transition effect should be applied
+  - transition-timing-function: patterns for transition to kick-in and go-out
+  - transiiton-delay: time after which the transition effect should get applied
+
+  - shorthand property: "transition"
