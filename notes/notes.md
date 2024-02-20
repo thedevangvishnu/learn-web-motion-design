@@ -104,3 +104,12 @@
   }
 }
 ```
+
+- Svg text loader animation
+
+  - new css properties:
+    - fill: color of body inside stroke
+    - stroke: color of stroke
+    - stroke-width: width of the stroke (lines)
+    - stroke-dashoffset: distance between the beginning of dash and begining of path
+    - stroke-dasharray: dashLength gap
