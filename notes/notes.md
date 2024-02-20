@@ -44,6 +44,63 @@
   - shorthand property: "transition"
 
 - To create overlay transitions
+
   - we use background: linear-gradient(), but transition-property doesn't apply on background or background-image properties.
-  - for that, we can add a ::before element and give background: linear-gradient() to it. Then, we can add transition to this ::before element on main-element::hover
+  - for that, we can add a ::before element (or use other pseudo elements) and give background: linear-gradient() to it. Then, we can add transition to this ::before element on main-element:hover
   - slick designs can be achieved using just transition, transform and opacity property
+
+- Transitions are not only applied on hovers. They can also be applied if an extra class is added or removed
+
+## CSS Animations
+
+- CSS animation is way to make elements gradually change their position or appearance over time.
+- It is done by defining "keyframes", which are points of in-between states of this change.
+- Animation is thus crated, by smooth transitioning between these keyframes.
+
+- How to create animations in CSS?
+
+  - The important thing is to define an amination by creating keyframes
+  - Then apply the created animation to an element using "animation" property
+  - animation: duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name;
+    - The order is important
+
+- Difference between animations and transitions
+  - animations have keyframes (in-between states of the change) while transiitons don't
+  - animations can be "iteration" (meaning can be ran once or more) while transiitons run only once
+  - animations have "direction" (which way the animation should run: forward, backward, alternate, etc.) while transitions run only forward
+  - animations have "play-state" (that is they can be paused in between their execution) while transitions must end once ran.
+
+```
+// CSS styles sheet
+
+@keyframes animationName {
+  from {
+    // initial values for any css propertyies
+  }
+  to {
+    // final value for that same css properties
+  }
+}
+
+
+```
+
+- Example
+
+```
+// CSS styles sheet
+
+.box {
+  animation: 2s ease-in-out 1s 2 moveRight;
+}
+
+
+@keyframe moveRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+```
